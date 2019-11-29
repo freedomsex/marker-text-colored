@@ -1,11 +1,6 @@
 <script>
 export default {
-  props: ['text', 'marker', 'color'],
-  data() {
-    return {
-      option: null,
-    };
-  },
+  props: ['text', 'index', 'type', 'marker'],
   computed: {
     status() {
       let values = {
@@ -14,17 +9,17 @@ export default {
         'warning': 4,
         'danger': 8,
       };
-      return values[this.color] || 0;
+      return values[this.type] || 0;
     },
     value() {
       return this.marker !== null ? this.marker : this.status;
     },
     colored() {
       return {
-        closed: this.value === 1,
-        virted: this.value === 2,
-        locked: this.value === 4,
-        banned: this.value === 8,
+        success: this.value === 1,
+        info: this.value === 2,
+        warning: this.value === 4,
+        danger: this.value === 8,
         skiped: !this.value,
       };
     },
@@ -33,7 +28,7 @@ export default {
 </script>
 
 <template>
-  <div class="marker-text-colored" :class="colored" @click="$emit('select')">
+  <div class="marker-text-colored" :class="colored" @click="$emit('select', index)">
     <slot>
       {{text}}
     </slot>
@@ -41,7 +36,6 @@ export default {
 </template>
 
 <style lang="less">
-// @import "~assets/css/_imports.less";
 .marker-text-colored {
   color: @dark;
   font-size: @font-md;
@@ -52,16 +46,16 @@ export default {
   background: @light;
   position: relative;
 
-  &.closed {
+  &.success {
     border-color: @green;
   }
-  &.virted {
+  &.info {
     border-color: @violet;
   }
-  &.locked {
+  &.warning {
     border-color: @orange-light;
   }
-  &.banned {
+  &.danger {
     border-color: @red;
   }
   &.skiped {
