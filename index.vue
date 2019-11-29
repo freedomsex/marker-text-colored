@@ -12,7 +12,7 @@ export default {
       return values[this.type] || 0;
     },
     value() {
-      return this.marker !== null ? this.marker : this.status;
+      return this.marker !== undefined ? this.marker : this.status;
     },
     colored() {
       return {
