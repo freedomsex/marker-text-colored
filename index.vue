@@ -1,33 +1,35 @@
 <script>
-import ColoredItem from './ColoredItem.vue'
+import TextItemColored from './TextItemColored.vue'
 
 export default {
   props: ['text', 'index', 'type', 'marker'],
   components: {
-    ColoredItem,
+    TextItemColored,
   },
 };
 </script>
 
 <template>
-<div>
+<div class="marker-text-colored">
   <div class="marker-text-colored__summary">
     <slot name="summary"></slot>
   </div>
-  <ColoredItem :type="type" :marker="marker" @select="$emit('select', index)">
+  <TextItemColored :type="type" :marker="marker" @select="$emit('select', index)">
     <slot>
       {{text}}
     </slot>
-  </ColoredItem>  
+  </TextItemColored>  
 </div> 
 </template>
 
 <style lang="less">
 .marker-text-colored {
+  margin-bottom: @indent-sm;
+
   &__summary {
     font-size: @font-sm; 
     padding-bottom: @indent-xs; 
-    color: @gray-dark; 
+    color: @dark-light; 
   }
 }
 </style>

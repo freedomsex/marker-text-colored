@@ -28,7 +28,7 @@ export default {
 </script>
 
 <template>
-  <div class="marker-text-colored" :class="colored" @click="$emit('select', index)">
+  <div class="text-item-colored" :class="colored" @click="$emit('select', index)">
     <slot>
       {{text}}
     </slot>
@@ -36,7 +36,7 @@ export default {
 </template>
 
 <style lang="less">
-.marker-text-colored {
+.text-item-colored {
   color: @dark;
   font-size: @font-md;
   margin-bottom: @indent-xs;
