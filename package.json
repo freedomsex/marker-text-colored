@@ -1,6 +1,6 @@
 {
   "name": "@freedomsex/marker-text-colored",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "",
   "main": "index.vue", 
   "repository": {
@@ -16,6 +16,5 @@
     "url": "https://github.com/freedomsex/marker-text-colored/issues"
   },
   "homepage": "https://github.com/freedomsex/marker-text-colored#readme",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "standard-version": {}
 }

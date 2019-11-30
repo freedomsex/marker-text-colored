@@ -15,7 +15,9 @@ export default {
     <slot name="summary"></slot>
   </div>
   <ColoredItem :type="type" :marker="marker" @select="$emit('select', index)">
-    {{text}}
+    <slot>
+      {{text}}
+    </slot>
   </ColoredItem>  
 </div> 
 </template>
