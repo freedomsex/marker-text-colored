@@ -29,7 +29,7 @@ export default {
   &__summary {
     font-size: @font-sm; 
     padding-bottom: @indent-xs; 
-    color: @dark-light; 
+    color: @gray-dark; 
   }
 }
 </style>

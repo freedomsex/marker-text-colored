@@ -1,6 +1,6 @@
 {
   "name": "@freedomsex/marker-text-colored",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "",
   "main": "index.vue", 
   "repository": {
@@ -8,7 +8,7 @@
     "url": "git+https://github.com/freedomsex/marker-text-colored.git"
   },
   "optionalDependencies": {
-    "@freedomsex/styles": "~0.0.2"
+    "@freedomsex/styles": "0.1.2"
   },
   "author": "tebaly",
   "license": "ISC",

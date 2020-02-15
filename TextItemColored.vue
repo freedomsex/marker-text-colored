@@ -37,7 +37,7 @@ export default {
 
 <style lang="less">
 .text-item-colored {
-  color: @dark;
+  color: @black;
   font-size: @font-md;
   margin-bottom: @indent-xs;
   padding: @indent-sm;
@@ -59,7 +59,7 @@ export default {
     border-color: @red;
   }
   &.skiped {
-    border-color: @gray;
+    border-color: @gray-light;
   }
 }
 </style>
